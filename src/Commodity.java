@@ -3,17 +3,18 @@ import java.util.PriorityQueue;
 class Commodity{
 	PriorityQueue<SellTransaction> sellQueue;
 	PriorityQueue<BuyTransaction> buyQueue;
-
-	Commodity(){
+	String description;
+	Commodity(String description){
 		sellQueue = new PriorityQueue<SellTransaction>();
 		buyQueue = new PriorityQueue<BuyTransaction>();
+		this.description = description;
 	}
 	
 	public void carryOutDeals(){
 		SellTransaction cheapestSell = sellQueue.peek();
 		BuyTransaction mostExpensiveBuy = buyQueue.peek();
-		while(sellQueue != null && buyQueue != null && cheapestSell.prize > mostExpensiveBuy.prize){
-			float revenue = cheapestSell.sellReturnRevenue(mostExpensiveBuy);
+		while(cheapestSell != null && mostExpensiveBuy != null && cheapestSell.prize < mostExpensiveBuy.prize){
+			double revenue = cheapestSell.sellReturnRevenue(mostExpensiveBuy);
 			if(cheapestSell.isEmpty()){
 				sellQueue.poll();
 				//TODO remove from list of trades
@@ -22,8 +23,8 @@ class Commodity{
 				buyQueue.poll();
 				//TODO remove from list of trades
 			}
-			Output.notifyWalletChange(cheapestSell.userID, revenue);
-			Output.notifyWalletChange(mostExpensiveBuy.userID, -revenue);
+			IO.notifyWalletChange(cheapestSell.userID, revenue);
+			IO.notifyWalletChange(mostExpensiveBuy.userID, -revenue);
 			cheapestSell = sellQueue.peek();
 			mostExpensiveBuy = buyQueue.peek();
 		}
@@ -35,6 +36,7 @@ class Commodity{
 			throw new RuntimeException("wrong commodity");
 		}
 		sellQueue.add(transaction);
+		carryOutDeals();
 	}
 
 	public void trade(BuyTransaction transaction){
@@ -42,8 +44,7 @@ class Commodity{
 			throw new RuntimeException("wrong commodity");
 		}
 		buyQueue.add(transaction);	
+		carryOutDeals();
 	}
-	
-	public void trade(Transaction _){}
 
 }

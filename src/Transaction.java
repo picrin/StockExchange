@@ -5,10 +5,10 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 abstract class Transaction{
 	int quantity;
 	Date date;
-	float prize;
+	double prize;
 	long userID;
 	Commodity commodity;
-	Transaction(int quantity, float prize, long userID, Commodity commodityID){
+	Transaction(int quantity, double prize, long userID, Commodity commodityID){
 		this.quantity = quantity;
 		this.date = new Date();
 		this.prize = prize;
@@ -25,12 +25,13 @@ abstract class Transaction{
 		}
 	}
 	
-	public void toPriorityQueue(){
-		commodity.trade(this);
-	}
 	
 	public boolean isEmpty(){
 		return (this.quantity == 0);
+	}
+	
+	public void printInfo(){
+		
 	}
 	
 }

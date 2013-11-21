@@ -1,19 +1,20 @@
-
 public class BuyTransaction extends Transaction implements Comparable<BuyTransaction>{
-	BuyTransaction(int quantity, float prize, long userID, Commodity commodityID){
+	BuyTransaction(int quantity, double prize, long userID, Commodity commodityID){
 		super(quantity, prize, userID, commodityID);
+		toPriorityQueue();
 	}
 
+	public void toPriorityQueue(){
+		commodity.trade(this);
+	}
+	
 	@Override
 	public int compareTo(BuyTransaction other) {
-		int compareByPrize = Float.compare(this.prize, other.prize);
+		int compareByPrize = Double.compare(other.prize, this.prize);
 		if (compareByPrize != 0){
 			return compareByPrize;
 		}
 		int compareByDate = this.date.compareTo(other.date);
-		if (compareByDate != 0){
-			return compareByDate;
-		}
-		return -1; 
+		return compareByDate;
 	}
 }
