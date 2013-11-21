@@ -29,5 +29,8 @@ abstract class Transaction{
 		commodity.trade(this);
 	}
 	
+	public boolean isEmpty(){
+		return (this.quantity == 0);
+	}
 	
 }
