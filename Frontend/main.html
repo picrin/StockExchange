@@ -1,12 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <script language = JavaScript>
+      function TeamInfo(){
+      alert("the data from backend guys");}
+    </script>
+
     <title>Bootswatch: Slate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="./bootstrap.css" media="screen">
-    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
@@ -29,12 +34,11 @@
     </script>
   </head>
   <body>
-    <script src="../assets/js/bsa.js"></script>
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../" class="navbar-brand">Bootswatch</a>
+          <a href="../" class="navbar-brand">Pizza Exchange</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -43,45 +47,9 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a tabindex="-1" href="../default/">Default</a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="../amelia/">Amelia</a></li>
-                <li><a tabindex="-1" href="../cerulean/">Cerulean</a></li>
-                <li><a tabindex="-1" href="../cosmo/">Cosmo</a></li>
-                <li><a tabindex="-1" href="../cyborg/">Cyborg</a></li>
-                <li><a tabindex="-1" href="../flatly/">Flatly</a></li>
-                <li><a tabindex="-1" href="../journal/">Journal</a></li>
-                <li><a tabindex="-1" href="../readable/">Readable</a></li>
-                <li><a tabindex="-1" href="../simplex/">Simplex</a></li>
-                <li><a tabindex="-1" href="../slate/">Slate</a></li>
-                <li><a tabindex="-1" href="../spacelab/">Spacelab</a></li>
-                <li><a tabindex="-1" href="../united/">United</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="../help/">Help</a>
-            </li>
-            <li>
-              <a href="http://news.bootswatch.com">Blog</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a tabindex="-1" href="./bootstrap.min.css">bootstrap.min.css</a></li>
-                <li><a tabindex="-1" href="./bootstrap.css">bootstrap.css</a></li>
-                <li class="divider"></li>
-                <li><a tabindex="-1" href="./variables.less">variables.less</a></li>
-                <li><a tabindex="-1" href="./bootswatch.less">bootswatch.less</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+            <li><a href="../help/">More Information</a></li>
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Login</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">Sign up</a></li>
           </ul>
 
         </div>
@@ -94,8 +62,7 @@
       <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-6">
-            <h1>Slate</h1>
-            <p class="lead">Shades of gunmetal gray</p>
+            <h1>Welcome to the Creative exchange</h1>
           </div>
           <div class="col-lg-6">
             <div class="bsa well">
@@ -105,13 +72,13 @@
         </div>
       </div>
 
-      <!-- Navbar
+      <!-- Navbar currently correcting it
       ================================================== -->
       <div class="bs-docs-section clearfix">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="navbar">Navbar</h1>
+              <h1 id="navbar">Teams</h1>
             </div>
 
             <div class="bs-example">
@@ -122,91 +89,64 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="#">Brand</a>
-                </div>
+
                 <div class="navbar-collapse collapse navbar-responsive-collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Dropdown header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search">
-                  </form>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div><!-- /.nav-collapse -->
-              </div><!-- /.navbar -->
-
-
-              <div class="navbar navbar-inverse">
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">Brand</a>
-                </div>
-                <div class="navbar-collapse collapse navbar-inverse-collapse">
-                  <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Active</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Dropdown header</li>
-                        <li><a href="#">Separated link</a></li>
-                        <li><a href="#">One more separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <form class="navbar-form navbar-left">
-                    <input type="text" class="form-control col-lg-8" placeholder="Search">
-                  </form>
-                  <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div><!-- /.nav-collapse -->
-              </div><!-- /.navbar -->
+ <div class="bs-example table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th><li><a class="navbar-brand" href="#">Teams</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Values</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Changes</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Shares</a></li></th>
+		  </tr>
+                </thead>
+		</div>
+                <tbody>
+		  <div class="btn-group">
+    <script language="JavaScript">
+      /* needed func to output how many teams we have                                                                                         
+           and how many table columns: IT DOESNT WORK */
+      function CreateTable(teams){
+      document.write('<center><table width="600" border="1">');
+      for(var j=1;j<=teams;j++){
+                      document.write('<tr>');
+                      for(var i=1;i<=4;i++){
+				      if(i==1){
+                                      document.write('<td><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></td>');}
+				      else{document.write('<td><li><a class="navbar-brand" href="#">Values </a></li></td>');}
+                      }
+                      document.write('</tr>');
+        }
+        document.write('</table></center>'); }
+     </script>
+	      <script>CreateTable(7);</script>
             </div><!-- /example -->
 
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Order teams by<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">A-Z</a></li>
+                        <li><a href="#">Values</a></li>
+                        <li><a href="#">Change</a></li>
+			<li><a href="#">Shares</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li> 
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+<!-- deleted right menu with dropdown and link buttons-->
+                  </ul>
+                </div><!-- /.nav-collapse -->
+              </div><!-- /.navbar -->
+              </div><!-- /.navbar -->
+            </div><!-- /example -->
           </div>
         </div>
       </div>
@@ -224,29 +164,9 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
-
-            <div class="bs-example">
-              <p>
-                <button type="button" class="btn btn-default">Default</button>
-                <button type="button" class="btn btn-primary">Primary</button>
-                <button type="button" class="btn btn-success">Success</button>
-                <button type="button" class="btn btn-info">Info</button>
-                <button type="button" class="btn btn-warning">Warning</button>
-                <button type="button" class="btn btn-danger">Danger</button>
-                <button type="button" class="btn btn-link">Link</button>
-              </p>
-            </div>
-
-            <div class="bs-example">
+          <div class="col-lg-6">               
               <p>
                 <button type="button" class="btn btn-default disabled">Default</button>
-                <button type="button" class="btn btn-primary disabled">Primary</button>
-                <button type="button" class="btn btn-success disabled">Success</button>
-                <button type="button" class="btn btn-info disabled">Info</button>
-                <button type="button" class="btn btn-warning disabled">Warning</button>
-                <button type="button" class="btn btn-danger disabled">Danger</button>
-                <button type="button" class="btn btn-link disabled">Link</button>
               </p>
             </div>
 
@@ -264,96 +184,13 @@
                     <li><a href="#">Separated link</a></li>
                   </ul>
                 </div><!-- /btn-group -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">Primary</button>
-                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div><!-- /btn-group -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-success">Success</button>
-                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div><!-- /btn-group -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-info">Info</button>
-                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div><!-- /btn-group -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-warning">Warning</button>
-                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div><!-- /btn-group -->
-              </div><!-- /btn-toolbar -->
-            </div>
-
-            <div class="bs-example">
-              <p>
-                <button type="button" class="btn btn-primary btn-lg">Large button</button>
-                <button type="button" class="btn btn-primary">Default button</button>
-                <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                <button type="button" class="btn btn-primary btn-xs">Mini button</button>
-              </p>
-            </div>
-            
-          </div>
           <div class="col-lg-6">
 
             <div class="bs-example">
               <p>
                 <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
               </p>
-            </div>
-
-
-            <div class="bs-example" style="margin-bottom: 15px;">
-              <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-default">Left</a>
-                <a href="#" class="btn btn-default">Middle</a>
-                <a href="#" class="btn btn-default">Right</a>
-              </div>
-            </div>
-
-            <div class="bs-example" style="margin-bottom: 15px;">
-              <div class="btn-toolbar">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default">1</button>
-                  <button type="button" class="btn btn-default">2</button>
-                  <button type="button" class="btn btn-default">3</button>
-                  <button type="button" class="btn btn-default">4</button>
-                </div>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default">5</button>
-                  <button type="button" class="btn btn-default">6</button>
-                  <button type="button" class="btn btn-default">7</button>
-                </div>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default">8</button>
-
+            </div>  
                   <div class="btn-group">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                       Dropdown
@@ -366,15 +203,6 @@
                      </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="bs-example">
-              <div class="btn-group-vertical">
-                  <button type="button" class="btn btn-default">Button</button>
-                  <button type="button" class="btn btn-default">Button</button>
-                  <button type="button" class="btn btn-default">Button</button>
-                  <button type="button" class="btn btn-default">Button</button>
               </div>
             </div>
 
@@ -435,98 +263,8 @@
           </div>
         </div>
 
-        <!-- Blockquotes -->
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 id="type-blockquotes">Blockquotes</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-            </blockquote>
-          </div>
-          <div class="col-lg-6">
-            <blockquote class="pull-right">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-
       <!-- Tables
       ================================================== -->
-      <div class="bs-docs-section">
-
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="tables">Tables</h1>
-            </div>
-
-            <div class="bs-example table-responsive">
-              <table class="table table-striped table-bordered table-hover">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr class="success">
-                    <td>4</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr class="danger">
-                    <td>5</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr class="warning">
-                    <td>6</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                  <tr class="active">
-                    <td>7</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div><!-- /example -->
-          </div>
-        </div>
-      </div>
 
       <!-- Forms
       ================================================== -->
@@ -1112,60 +850,11 @@
             </div>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h2>Wells</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="well">
-              Look, I'm in a well!
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="well well-sm">
-              Look, I'm in a small well!
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="well well-lg">
-              Look, I'm in a large well!
-            </div>
-          </div>
-        </div>
       </div>
-
-
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            
-            <ul class="list-unstyled">
-              <li class="pull-right"><a href="#top">Back to top</a></li>
-              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
-              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
-              <li><a href="https://twitter.com/thomashpark">Twitter</a></li>
-              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
-              <li><a href="../help/#api">API</a></li>
-              <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">Donate</a></li>
-            </ul>
-            <p>Made by <a href="http://thomaspark.me">Thomas Park</a>. Contact him at <a href="mailto:hello@thomaspark.me">hello@thomaspark.me</a>.</p>
-            <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
-            <p>Based on <a href="http://getbootstrap.com">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts">Google</a>. Favicon by <a href="https://twitter.com/geraldhiller">Gerald Hiller</a>.</p>
-
-          </div>
-        </div>
-        
-      </footer>
-    
-
     </div>
 
 
-    <script src="../bower_components/jquery/jquery.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/bootswatch.js"></script>
+
+
   </body>
 </html>
