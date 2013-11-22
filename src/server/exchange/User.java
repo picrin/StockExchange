@@ -1,3 +1,5 @@
+package server.exchange;
+
 import java.util.ArrayList;
 
 public class User {

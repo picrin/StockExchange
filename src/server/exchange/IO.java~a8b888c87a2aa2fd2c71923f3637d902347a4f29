@@ -1,3 +1,5 @@
+package server.exchange;
+
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -11,6 +13,7 @@ public class IO{
 	public static double buyer = 0;
 	public static double seller = 0;
 	static ConcurrentHashMap<Long, ConcurrentLinkedQueue<Transaction>> transactionsByUserID = new ConcurrentHashMap<Long, ConcurrentLinkedQueue<Transaction>>();
+	static ConcurrentHashMap<User, ConcurrentLinkedQueue<Commodity>>  commoditiesByUser;
 	public static String serveTransactionsByUser(long userID){
 		ObjectMapper mapper = new ObjectMapper();
 	    ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
