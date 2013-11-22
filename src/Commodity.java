@@ -23,6 +23,7 @@ class Commodity{
 				buyQueue.poll();
 				//TODO remove from list of trades
 			}
+			//TODO przepisac dla concurrency
 			IO.notifyWalletChange(cheapestSell.userID, revenue);
 			IO.notifyWalletChange(mostExpensiveBuy.userID, -revenue);
 			cheapestSell = sellQueue.peek();

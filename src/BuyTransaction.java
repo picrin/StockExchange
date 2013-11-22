@@ -1,6 +1,6 @@
 public class BuyTransaction extends Transaction implements Comparable<BuyTransaction>{
-	BuyTransaction(int quantity, double prize, long userID, Commodity commodityID){
-		super(quantity, prize, userID, commodityID);
+	BuyTransaction(int quantity, double prize, long userID, Commodity commodity){
+		super(quantity, prize, userID, commodity);
 		toPriorityQueue();
 	}
 

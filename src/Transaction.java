@@ -1,11 +1,13 @@
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 abstract class Transaction{
-	int quantity;
-	Date date;
-	double prize;
+	public int quantity;
+	public Date date;
+	public double prize;
 	long userID;
 	Commodity commodity;
 	Transaction(int quantity, double prize, long userID, Commodity commodityID){
@@ -14,15 +16,12 @@ abstract class Transaction{
 		this.prize = prize;
 		this.commodity = commodityID;
 		this.userID = userID;
+		toPendingList(IO.transactionsByUserID);
 	}
-	
+	//TODO przepisac funkcje
 	public void toPendingList(ConcurrentHashMap<Long, ConcurrentLinkedQueue<Transaction>> transactionsByUserID){
-		if(!transactionsByUserID.contains(this.userID)){
-			transactionsByUserID.put(this.userID, new ConcurrentLinkedQueue<Transaction>());
-		}
-		else{
-			transactionsByUserID.get(this.userID).add(this);
-		}
+		transactionsByUserID.putIfAbsent(this.userID, new ConcurrentLinkedQueue<Transaction>());
+		transactionsByUserID.get(this.userID).add(this);
 	}
 	
 	

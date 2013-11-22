@@ -69,7 +69,7 @@ public class Tests {
 		Assert.assertEquals(bullySell.quantity, 0);
 	}
 
-	public static int transactionVolume = 300000;
+	public static int transactionVolume = 10;//300000;
 	@Test
 	public void massiveTrading(){
 		Commodity teamA = new Commodity("Team A");
@@ -112,7 +112,28 @@ public class Tests {
 		//System.out.println("money pending in buyers: " + buyerMoneyPending);
 		Assert.assertEquals(moneyInSelling, IO.seller + sellerMoneyPending, 0.000001);
 	}
+	@Test
+	public void dummyIOTest(){
+		Commodity queenBed = new Commodity("queen's sleep");
+		Commodity myBed = new Commodity("private bed");
+		Commodity bedNgirl = new Commodity("buy 1 get 1 free");
+		
+		//User 0
+		SellTransaction carefullTrans1 = new SellTransaction(81, 100.00, 0, queenBed);
+		SellTransaction carefullTrans2 = new SellTransaction(134, 89.1, 0, myBed);
 
+		BuyTransaction carefullBuy2 = new BuyTransaction(89, 8.09, 0, bedNgirl);
+		BuyTransaction carefullBuy3 = new BuyTransaction(111, 4.13, 0, myBed);
+		BuyTransaction carefullBuy1 = new BuyTransaction(22, 5.00, 0, queenBed);
+
+		//User 1
+		SellTransaction carefulTrans1Us1 = new SellTransaction(11, 702.0, 1, bedNgirl);
+
+		BuyTransaction carefullBuy1Us1 = new BuyTransaction(81, 3.13, 1, bedNgirl);
+		BuyTransaction carefullBuy2Us1 = new BuyTransaction(8, 0.01, 1, queenBed);
+		System.out.println(IO.serveTransactionsByUser(1));
+		System.out.println(IO.serveTransactionsByUser(0));
+	}
 	
 
 }
