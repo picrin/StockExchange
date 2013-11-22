@@ -28,12 +28,15 @@
       <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
       <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
     <![endif]-->
+     <script src="./js/highstock.js"></script>
     <script type="text/javascript">
 $(function() {
   $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
 
     // Create the chart
-    $('#container').highcharts('StockChart', {
+    $('.testchart').each(function (index) { 
+
+      $(this).highcharts('StockChart', {
       
 
       rangeSelector : {
@@ -57,8 +60,13 @@ $(function() {
         }
       }]
     });
+
+    });
+
   });
 });
+
+</script>
     <script type="text/javascript">
 
      var _gaq = _gaq || [];
@@ -76,7 +84,6 @@ $(function() {
     </script>
   </head>
   <body>
-
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -101,19 +108,44 @@ $(function() {
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="login.html" target="_blank">Log In</a></li>
-            <li><a href="signin.html" target="_blank">Sign Up</a></li>
+            <li><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Log In</button></li>
+            <li><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign In</button></li>
           </ul>
 
         </div>
       </div>
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Please sign in</h4>
+      </div>
+      <div class="modal-body">
+              <div class="col-md-1">
+                 <form class="form-signin">
+                 <input type="text" class="form-control" placeholder="Email address" required autofocus>
+                 <input type="password" class="form-control" placeholder="Password" required>
+                 <label class="checkbox">
+                   <input type="checkbox" value="remember-me"> Remember me
+                 </label>
+               </form>
 
+              </div> <!-- col-md-1 -->
+              <div class="col-md-1">
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-default" type="submit">Sign in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <div class="container">
-<<<<<<< HEAD
-=======
-
       <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-6">
@@ -123,7 +155,7 @@ $(function() {
           </div>
         </div>
       </div>
->>>>>>> b1850332c44cf6ab1c7d8507f4ca8e72db06a321
+
      <div class="bs-docs-section clearfix">
         <div class="row">
           <div class="col-lg-12">
@@ -172,12 +204,15 @@ $(function() {
 			document.write('<div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div>');
 		        document.write('<div id="invisible"></div>');
 		        document.write('</td>');
+
 		    }
                     else{ 
-			document.write('<td>');
-			document.write('<div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div>')
-			document.write('<div id="invisible"></div>');
-			document.write('</td>');
+			 document.write('<td>');
+			 document.write('<div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div>');
+			 document.write('<div id="invisible">');
+       document.write('<div id="testchart" style="min-width: 500px; height: 400px; margin: 0 auto;"></div>');
+       document.write('</div>');  
+			 document.write('</td>');
 	            }
                 }
                 document.write('</tr>');
