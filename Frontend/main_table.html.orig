@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <script language = JavaScript>
+      function TeamInfo(){
+      alert("the data from backend guys");}
+    </script>
+    <title>Bootswatch: Slate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>                                                                                                                          
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>                                                             
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>                                                           
+    <![endif]-->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+$(function() {
+  $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+
+    // Create the chart
+    $('#container').highcharts('StockChart', {
+      
+
+      rangeSelector : {
+        selected : 1
+      },
+
+      title : {
+        text : 'AAPL Stock Price'
+      },
+      
+      series : [{
+        name : 'AAPL Stock Price',
+        data : data,
+        marker : {
+          enabled : true,
+          radius : 3
+        },
+        shadow : true,
+        tooltip : {
+          valueDecimals : 2
+        }
+      }]
+    });
+  });
+});
+    <script type="text/javascript">
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">Pizza Exchange</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+             <a href="../help/">About Us</a>
+            </li>
+            <li>
+              <a href="../help/">Contacts</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Help</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html" target="_blank">Log In</a></li>
+            <li><a href="signin.html" target="_blank">Sign Up</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+<<<<<<< HEAD
+=======
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="bsa well">
+                <div id="bsap_1277971" class="bsarocks bsap_c466df00a3cd5ee8568b5c4983b6bb19"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> b1850332c44cf6ab1c7d8507f4ca8e72db06a321
+     <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div style="height=40"></div>
+            <div class="page-header">
+
+              <h1 id="navbar">Teams</h1>
+            </div>
+
+            <div class="bs-example">
+              <div class="navbar navbar-default">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+         <div class="bs-example table-responsive">
+             <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th><li><a class="navbar-brand" href="#">Teams</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Values</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Changes</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">Shares</a></li></th>
+                  </tr>
+                </thead> 
+              </table>
+	   </div>
+                  <div class="btn-group">
+    <script language="JavaScript">
+      /* needed func to output how many teams we have                                           \
+
+           and how many table columns: IT DOESNT WORK */
+   function CreateTable(teams){
+      document.write('<center><table id="teams" width="600" border="1">');
+                 
+      for(var j=1;j<=teams;j++){
+              document.write('<tr>');
+                for(var i=1;i<=4;i++){
+                    if(i==1){
+			document.write('<td>');
+			document.write('<div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div>');
+		        document.write('<div id="invisible"></div>');
+		        document.write('</td>');
+		    }
+                    else{ 
+			document.write('<td>');
+			document.write('<div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div>')
+			document.write('<div id="invisible"></div>');
+			document.write('</td>');
+	            }
+                }
+                document.write('</tr>');
+        }
+        document.write('</table></center>');
+    }
+     </script>
+     <script> CreateTable(7); </script>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Order team\
+s by<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">A-Z</a></li>
+                        <li><a href="#">Values</a></li>
+                        <li><a href="#">Change</a></li>
+                        <li><a href="#">Shares</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+<!-- deleted right menu with dropdown and link buttons-->
+                  </ul>
+                </div><!-- /.nav-collapse -->
