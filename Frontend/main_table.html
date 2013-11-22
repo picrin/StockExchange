@@ -2,9 +2,15 @@
 <html lang="en">
   <head>
 
-    <script language = JavaScript>
+    <script language="JavaScript">
       function TeamInfo(){
       alert("the data from backend guys");}
+
+      function DropOrRize(olddata,newdata){
+	       var result = newdata-olddata; 
+	       document.write(result + '%');
+          
+      }
     </script>
     <title>Bootswatch: Slate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,41 +99,119 @@
                     <th><li><a class="navbar-brand" href="#">Values</a></li></th>
                     <th><li><a class="navbar-brand" href="#">Changes</a></li></th>
                     <th><li><a class="navbar-brand" href="#">Shares</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">% Drop/Rize</a></li></th>
+		    <th><li><a class="navbar-brand" href="#">Buy</a></li></th>
+		    <th><li><a class="navbar-brand" href="#">Sell</a></li></th> 
                   </tr>
                 </thead> 
               </table>
 	   </div>
                   <div class="btn-group">
-    <script language="JavaScript">
-      /* needed func to output how many teams we have                                           \
-
-           and how many table columns: IT DOESNT WORK */
-   function CreateTable(teams){
-      document.write('<center><table id="teams" width="600" border="1">');
-                 
-      for(var j=1;j<=teams;j++){
-              document.write('<tr>');
-                for(var i=1;i<=4;i++){
-                    if(i==1){
-			document.write('<td>');
-			document.write('<div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div>');
-		        document.write('<div id="invisible"></div>');
-		        document.write('</td>');
-		    }
-                    else{ 
-			document.write('<td>');
-			document.write('<div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div>')
-			document.write('<div id="invisible"></div>');
-			document.write('</td>');
-	            }
-                }
-                document.write('</tr>');
-        }
-        document.write('</table></center>');
-    }
-     </script>
-     <script> CreateTable(7); </script>
-                    <li class="dropdown">
+      <center><table id="teams" width="750" align="center" border="1">
+          <tr>    
+	    <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	  </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+<tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+      </table></center>
+                       <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Order team\
 s by<b class="caret"></b></a>
                       <ul class="dropdown-menu">
