@@ -1,3 +1,5 @@
+package server.exchange;
+
 public class BuyTransaction extends Transaction implements Comparable<BuyTransaction>{
 	BuyTransaction(int quantity, double prize, long userID, Commodity commodity){
 		super(quantity, prize, userID, commodity);

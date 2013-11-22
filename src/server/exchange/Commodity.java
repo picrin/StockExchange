@@ -1,10 +1,11 @@
 import java.util.PriorityQueue;
 
-class Commodity{
+public class Commodity{
 	PriorityQueue<SellTransaction> sellQueue;
 	PriorityQueue<BuyTransaction> buyQueue;
 	String description;
-	Commodity(String description){
+	
+	public Commodity(String description){
 		sellQueue = new PriorityQueue<SellTransaction>();
 		buyQueue = new PriorityQueue<BuyTransaction>();
 		this.description = description;
