@@ -3,6 +3,7 @@ package server.exchange;
 import java.util.PriorityQueue;
 
 public class Commodity{
+	
 	PriorityQueue<SellTransaction> sellQueue;
 	PriorityQueue<BuyTransaction> buyQueue;
 	String description;
