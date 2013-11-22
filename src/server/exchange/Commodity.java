@@ -1,3 +1,5 @@
+package server.exchange;
+
 import java.util.PriorityQueue;
 
 public class Commodity{

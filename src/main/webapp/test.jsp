@@ -1,6 +1,6 @@
-<%@ page import="server.exchange.Commodity" %>
+<%@ page import="server.exchange.*" %>
 <%
-Commodity cm = new Commodity("Bed");
+Commodity cm = new Commodity();
 //SellTransaction st = new SellTransaction(1, 1.0, 1, null);
 String test = "test";
 %>
