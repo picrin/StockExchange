@@ -2,20 +2,77 @@
 <html lang="en">
   <head>
 
-    <script language = JavaScript>
+    <script language="JavaScript">
       function TeamInfo(){
       alert("the data from backend guys");}
+
+      function DropOrRize(olddata,newdata){
+	       var result = newdata-olddata; 
+	       document.write(result + '%');
+          
+      }
     </script>
     <title>Bootswatch: Slate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="./bootstrap.css" media="screen">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>                                                                                                                          
       <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>                                                             
       <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>                                                           
     <![endif]-->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="../bower_components/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+     <script src="./js/highstock.js"></script>
+    <script type="text/javascript">
+$(function() {
+  $.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+
+    // Create the chart
+    $('.testchart').each(function (index) { 
+
+      $(this).highcharts('StockChart', {
+      
+
+      rangeSelector : {
+        selected : 1
+      },
+
+      title : {
+        text : 'AAPL Stock Price'
+      },
+      
+      series : [{
+        name : 'AAPL Stock Price',
+        data : data,
+        marker : {
+          enabled : true,
+          radius : 3
+        },
+        shadow : true,
+        tooltip : {
+          valueDecimals : 2
+        }
+      }]
+    });
+
+    });
+
+  });
+});
+
+</script>
     <script type="text/javascript">
 
      var _gaq = _gaq || [];
@@ -33,11 +90,10 @@
     </script>
   </head>
   <body>
-
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-	<div class="navbar-header">
-          <a href="../" class="navbar-brand">Pizza Exchange</a>
+        <div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">Pizza Exchange</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -46,18 +102,56 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
-            <li><a href="../help/">More Information</a></li>
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Login</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">Sign up</a></li>
+            <li>
+             <a href="../help/">About Us</a>
+            </li>
+            <li>
+              <a href="../help/">Contacts</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Help</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Log In</button></li>
+            <li><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign In</button></li>
           </ul>
 
         </div>
       </div>
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Please sign in</h4>
+      </div>
+      <div class="modal-body">
+              <div class="col-md-1">
+                 <form class="form-signin">
+                 <input type="text" class="form-control" placeholder="Email address" required autofocus>
+                 <input type="password" class="form-control" placeholder="Password" required>
+                 <label class="checkbox">
+                   <input type="checkbox" value="remember-me"> Remember me
+                 </label>
+               </form>
 
+              </div> <!-- col-md-1 -->
+              <div class="col-md-1">
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button class="btn btn-default" type="submit">Sign in</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <div class="container">
-
       <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-6">
@@ -67,10 +161,13 @@
           </div>
         </div>
       </div>
+
      <div class="bs-docs-section clearfix">
         <div class="row">
           <div class="col-lg-12">
+            <div style="height=40"></div>
             <div class="page-header">
+
               <h1 id="navbar">Teams</h1>
             </div>
 
@@ -93,41 +190,120 @@
                     <th><li><a class="navbar-brand" href="#">Values</a></li></th>
                     <th><li><a class="navbar-brand" href="#">Changes</a></li></th>
                     <th><li><a class="navbar-brand" href="#">Shares</a></li></th>
+                    <th><li><a class="navbar-brand" href="#">% Drop/Rize</a></li></th>
+		    <th><li><a class="navbar-brand" href="#">Buy</a></li></th>
+		    <th><li><a class="navbar-brand" href="#">Sell</a></li></th> 
                   </tr>
                 </thead> 
               </table>
 	   </div>
                   <div class="btn-group">
-    <script language="JavaScript">
-      /* needed func to output how many teams we have                                           \
-
-           and how many table columns: IT DOESNT WORK */
-   function CreateTable(teams){
-      document.write('<center><table id="teams" width="600" border="1">');
-                 
-      for(var j=1;j<=teams;j++){
-              document.write('<tr>');
-                for(var i=1;i<=4;i++){
-                    if(i==1){
-			document.write('<td>');
-			document.write('<div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div>');
-		        document.write('<div id="invisible"></div>');
-		        document.write('</td>');
-		    }
-                    else{ 
-			document.write('<td>');
-			document.write('<div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div>')
-			document.write('<div id="invisible"></div>');
-			document.write('</td>');
-	            }
-                }
-                document.write('</tr>');
-        }
-        document.write('</table></center>');
-    }
-     </script>
-     <script> CreateTable(7); </script>
-                    <li class="dropdown">
+      <center><table id="teams" width="750" align="center" border="1">
+          <tr>    
+	    <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	    <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+	    <td><div id="invisible"></div></td>
+	  </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+<tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+          <tr>
+            <td><div id="visible"><button type="button" class="btn btn-default" onCLick="TeamInfo()">Team whoever</button></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="invisible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values</></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#"><script>DropOrRize(1,2)</script></a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+            <td><div id="visible"><li><a class="navbar-brand" href="#">Values </a></li></div></td>
+            <td><div id="invisible"></div></td>
+          </tr>
+      </table></center>
+                       <li class="dropdown">
+>>>>>>> 88a8bf211e2eeb29bedd6000e18c0f2e4887ae3f
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Order team\
 s by<b class="caret"></b></a>
                       <ul class="dropdown-menu">
