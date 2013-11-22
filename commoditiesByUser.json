@@ -1,0 +1,58 @@
+{
+  "0" : [{
+    "commodity" : 11,
+    "type" : "sell",
+    "quantity" : 26,
+    "date" : 1385079466427,
+    "prize" : 21.25,
+  }, {
+    "commodity" : 7,
+    "type" : "buy",
+    "quantity" : 21,
+    "date" : 1385079466435,
+    "prize" : 2.23,
+  }, {
+    "commodity" : 9,
+    "type" : "sell",
+    "quantity" : 12,
+    "date" : 1385079466441,
+    "prize" : 11.25,
+  }, {
+    "commodity" : 11,
+    "type" : "buy",
+    "quantity" : 30,
+    "date" : 1385079466441,
+    "prize" : 3.47,
+  }],
+  "1" : [{
+    "commodity" : 13,
+    "type" : "buy",
+    "quantity" : 10,
+    "date" : 1385079466444,
+    "prize" : 0.936699388882964,
+  }, {
+    "commodity" : 13,
+    "type" : "buy",
+    "quantity" : 54,
+    "date" : 1385079466444,
+    "prize" : 0.8974647950905086,
+  }, {
+    "commodity" : 2,
+    "type" : "sell",
+    "quantity" : 11,
+    "date" : 1385079466445,
+    "prize" : 72.0,
+  }, {
+    "commodity" : 8,
+    "type" : "sell",
+    "quantity" : 81,
+    "date" : 1385079466445,
+    "prize" : 1.13,
+  }, {
+    "commodity" : 7,
+    "type" : "buy",
+    "quantity" : 8,
+    "date" : 1385079466445,
+    "prize" : 0.01,
+  }]
+}
